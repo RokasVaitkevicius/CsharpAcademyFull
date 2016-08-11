@@ -1,0 +1,18 @@
+<div *ngIf="_hosts$">
+    <div *ngFor="let host of _hosts$ | async">
+        Name: {{host.name}}
+        <br/>
+        State: {{host.state}}
+        <br/>
+        Physical memory: {{host.PhysicalMemory}}
+        <br/>
+        Processor count: {{host.processorCount}}
+        <br/>
+
+        <button (click)="onNavigate(host.hostId)">Virtual machines</button>
+        <br/>
+        <br/>
+        <br/>
+    </div>
+
+</div>

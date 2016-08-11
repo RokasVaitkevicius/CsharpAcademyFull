@@ -1,0 +1,11 @@
+<div *ngIf="_virtualM$">
+  <div *ngFor="let vm of _virtualM$ | async">
+    Virtual machine name: {{vm.name}}
+    <br/>
+      <button (click)="onNavigate(vm.virtualMachineId)">Details</button>
+    <br/>
+    <br/>
+    <br/>
+  </div>
+
+</div>
